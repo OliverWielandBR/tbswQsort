@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.80.34 SP02?>
+<Library Version="1.00.4" HeaderFileName="Quicksort.h" Description="Quicksort-Library" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Quicksort.typ</File>
+    <File Description="Exported constants">Quicksort.var</File>
+    <File Description="Exported functions and function blocks">Quicksort.fun</File>
+    <File Description="Sortiert Strings mit dem Quicksort-Algorithmus">qsort_str.c</File>
+    <File Description="Sortiert Integer in aufsteigender Reihefolge">qsort_int.c</File>
+  </Files>
+</Library>
