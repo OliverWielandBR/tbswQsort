@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include "Quicksort.h"
 
+
 int vergl_int(int i1, int i2)
 {
 	if (i1 < i2)
