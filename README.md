@@ -1,24 +1,25 @@
 # tbswQsort
-ANSI-C bietet den Quicksort-Algorithmus als "eingebaute" Funktion. Leider ist das unter den IEC-Sprachen nicht nutzbar.
+ANSI-C provides the Quicksort algorithm as a "built-in" function. Unfortunately, this is not usable among IEC languages.
+Therefore, the present library serves as a wrapper around the C function qsort to make it usable in IEC languages.
 
-Die vorliegende Library dient daher als Wrapper um die C-Funktion ''qsort'', um diese in denIEC-Sprachen nutzen zu können
+## Functions
+The library includes 2 functions:
 
-## Funktionen
-Die Library beinhaltet 2 Funktionen:
-### Sortieren von Strings
+### Sorting Strings
 <code>UINT qsort_str(UDINT pStrings, UDINT len, UDINT count)</code>
-* pStrings: Adresse des zu sortierenden Stringfeldes
-* len: Länge eines Strings im Stringfeld
-* count: Anzahl der zu sortierenden Strings
-Der Rückgabewert ist derzeit immer 0
 
-Die Strings werden in ASCII-aufsteigender Folge sortiert
+* pStrings: Address of the string array to be sorted
+* len: Length of a string in the string array
+* count: Number of strings to be sorted
+The return value is currently always 0.
+The strings are sorted in ASCII ascending order.
 
- ### Sortieren von Ganzzahlen
+### Sorting Integers
 <code>UINT qsort_int(UDINT pIntArray, UDINT count)</code>
-* pIntArray: Adresse des zu sortierenden INT-Arrays
-* count: Anzahl der zu sortierenden Zahlen
-Der Rückgabewert ist derzeit immer 0
 
-## Anmerkung
-Die Funktionen sortieren in einem Durchlauf das gesamte übergebene Array. Daher ist besonders bei großen Feldern darauf zu achten, dass die Funktion in einer niederprioren Taskklasse läuft, idealerweise in TC#8.
+* pIntArray: Address of the INT array to be sorted
+* count: Number of integers to be sorted
+The return value is currently always 0.
+
+## Note
+The functions sort the entire passed array in a single pass. Therefore, it is crucial to ensure that the function runs in a lower-priority task class, ideally in TC#8, especially for large arrays.
